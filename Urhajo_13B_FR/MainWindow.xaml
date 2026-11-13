@@ -1,0 +1,30 @@
+﻿<Window x:Class="Urhajo_13B_FR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Urhajo_13B_FR"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="260"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="0" Orientation="Vertical" Background="#162129">
+            <TextBlock Text="Űrhajó műveletek" Foreground="White" FontSize="22" FontWeight="Bold" Margin="0,0,0,20"/>
+            <Button Content="Adatok betöltése" Click="BtnBetoltes_Click" Margin="0,5" Padding="5"/>
+            <Button Content="Hány űrhajó van?" Click="BtnDarab_Click" Margin="0,5" Padding="5"/>
+            <Button Content="Melyiknek a legnagyobb a hatótávja?" Click="BtnMaxHatotav_Click" Margin="0,5" Padding="5"/>
+            <Button Content="Kik voltak sikeres küldetésen?" Click="BtnSikeres_Click" Margin="0,5" Padding="5"/>
+            <Button Content="Átlagos legénységszám" Click="BtnAtlag_Click" Margin="0,5" Padding="5"/>
+            <Button Content="Gyártók szerinti csoportosítás" Click="BtnCsoportositas_Click" Margin="0,5" Padding="5"/>
+            <Button Content="Keresés név alapján" Click="BtnKereses_Click" Margin="0,5" Padding="5"/>
+            <TextBox x:Name="Textbox1" Margin="0,10,0,5" Height="25"/>
+            <TextBox x:Name="Textbox2" IsReadOnly="True" Margin="0,5" Height="25"/>
+        </StackPanel>
+
+        <DataGrid x:Name="DataGrid" Grid.Column="1" Margin="10" AutoGenerateColumns="True" IsReadOnly="True"/>
+    </Grid>
+</Window>
